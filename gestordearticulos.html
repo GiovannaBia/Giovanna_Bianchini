@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link href="https://fontawesome.com/icons" rel="stylesheet" />
+    <title>Giovanna Bianchini</title>
+    <style>
+      body {
+        box-sizing: border-box;
+        position: relative;
+        margin: 50px;
+        color: white;
+        background-color: black;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("img/back.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        opacity: 0.2; /* Ajusta este valor para cambiar la transparencia */
+        z-index: -1; /* Asegura que el fondo esté detrás del contenido */
+      }
+
+      .gestor {
+        padding: 40px;
+        color: white;
+        text-align: center;
+      }
+      h1 {
+        margin-bottom: 40px;
+      }
+      .gestor p {
+        width: 70%;
+        text-align: center;
+        margin: 40px auto;
+      }
+      .imagenes-gestor {
+        display: flex;
+        flex-direction: column;
+        max-width: 800px;
+        align-items: center;
+        margin: auto;
+      }
+
+      .imagen {
+        width: 500px;
+        margin: 30px;
+        transition: transform 0.5s ease;
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+        overflow: hidden;
+      }
+      .imagen:hover {
+        transform: scale(1.4);
+      }
+
+      h5 {
+        margin-top: 30px;
+      }
+
+      a,
+      .volver {
+        text-align: center;
+        background-color: #292724;
+        color: #ffffff;
+        border-radius: 30px;
+        padding: 10px;
+        display: block;
+        width: 100px;
+        margin: 10px auto;
+        text-decoration: none;
+      }
+
+      a,
+      .volver:hover {
+        background-color: #1f021f;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gestor">
+      <h1>Gestor de artículos</h1>
+      <p>
+        Programado en C#, .Net Framework. Es una aplicación de escritorio cuyas
+        funcionalidades son agregar, eliminar, modificar, realizar búsquedas
+        mediante distintos filtros, y ver los detalles de los artículos que se
+        desee.
+      </p>
+      <div class="imagenes-gestor">
+        <img src="img/gestordearticulos.jpg" class="imagen" />
+        <img src="img/gestordearticulos2.png" class="imagen" />
+        <img src="img/gestordearticulos3.png" class="imagen" />
+      </div>
+      <h5>Link de GitHub:</h5>
+      <a
+        href="https://github.com/GiovannaBia/TPFinalNivel2_Bianchini"
+        class="volver"
+        >Click aquí
+      </a>
+    </div>
+    <a href="index.html" class="volver">Volver</a>
+  </body>
+</html>

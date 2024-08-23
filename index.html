@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <title>Giovanna Bianchini</title>
+    <style>
+      body {
+        box-sizing: border-box;
+        position: relative;
+        margin: auto;
+        color: white;
+        background-color: black;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("Img/back.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        opacity: 0.2;
+        z-index: -1;
+      }
+
+      .header,
+      #sobremi,
+      #misproyectos {
+        position: relative;
+        z-index: 1;
+      }
+
+      .header {
+        width: 80%;
+        height: 100vh;
+        margin: auto;
+        margin-bottom: 100px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+      }
+
+      .header-text {
+        padding: 20px;
+      }
+
+      .header .btn {
+        margin: 20px auto;
+        padding: 12px;
+        background-color: aliceblue;
+        font-weight: 650;
+        color: #460346;
+        border-radius: 22px;
+        font-weight: 500;
+      }
+      .btn:hover {
+        background-color: #292724;
+        color: white;
+      }
+
+      h1 {
+        margin-bottom: 30px;
+      }
+
+      h3 {
+        margin-bottom: 30px;
+      }
+
+      .imagen img {
+        width: 350px;
+        height: auto;
+        border-radius: 50%;
+        margin-bottom: 20px;
+        margin: 30px;
+      }
+
+      @media (min-width: 768px) {
+        .header {
+          flex-direction: row;
+          justify-content: space-between;
+          text-align: left;
+        }
+
+        .header-text {
+          flex: 1;
+          padding: 20px;
+          text-align: center;
+        }
+
+        .imagen {
+          flex: 1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .imagen img {
+          margin-bottom: 0;
+        }
+      }
+
+      #sobremi {
+        padding: 90px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
+
+      #sobremi p {
+        width: 70%;
+        text-align: center;
+        margin: auto;
+        font-size: 17px;
+        color: white;
+      }
+      #sobremi .btn,
+      #skills .btn {
+        margin: 20px auto;
+        padding: 12px;
+        background-color: aliceblue;
+        font-weight: 650;
+        color: #460346;
+        border-radius: 22px;
+        font-weight: 500;
+      }
+      #sobremi .btn:hover,
+      #skills .btn:hover {
+        background-color: #292724;
+        color: white;
+      }
+
+      #skills {
+        padding: 90px 20px;
+        margin: 90px auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        min-height: 50vh;
+        color: white;
+      }
+
+      h6 {
+        margin-top: 40px;
+        text-align: center;
+        color: white;
+        background-color: #460346;
+        padding: 10px;
+        border-radius: 10px;
+        margin: 30px;
+      }
+
+      h6:hover {
+        background-color: #9b259b;
+      }
+
+      .skills {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        text-align: center;
+        margin-bottom: 50px;
+        margin-top: 60px;
+      }
+
+      @media (min-width: 768px) {
+        .skills {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+
+      #misproyectos {
+        margin-top: 200px;
+        margin: auto;
+        justify-content: center;
+      }
+      h2 {
+        margin-left: 80px;
+        color: rgba(255, 255, 255, 0.658);
+      }
+      .proyectos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+        gap: 20px;
+        justify-content: center;
+      }
+      @media (min-width: 980px) {
+        .proyectos {
+          margin: auto;
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .skills {
+          grid-template-columns: repeat(7, 1fr);
+        }
+      }
+
+      .card {
+        background-color: #1a171a;
+        margin: 10px;
+        margin-top: 50px;
+        padding: 10px;
+        height: 80%;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .card:hover {
+        background-color: #1f021f;
+      }
+
+      .card-img-top {
+        max-width: 500px;
+        height: 300px;
+        object-fit: cover;
+      }
+
+      .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+      }
+      .buttons {
+        margin-top: 10px;
+      }
+      .buttons .btn {
+        margin: 8px;
+        padding: 10px;
+        background-color: aliceblue;
+        border-radius: 22px;
+        font-weight: 650;
+        color: #460346;
+      }
+      .btn:hover {
+        background-color: #292724;
+        color: white;
+      }
+
+      #contacto h2 {
+        margin: 30px;
+      }
+      .contacto {
+        display: block;
+        margin: 30px;
+        color: white;
+      }
+      .contacto i {
+        font-size: 30px;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-text">
+        <h1>Giovanna Bianchini</h1>
+        <a href="#sobremi" class="btn">Sobre mi</a>
+      </div>
+      <div class="imagen">
+        <img src="Img/IMG-20220424-WA0013.jpg" alt="Foto de perfil" />
+      </div>
+    </div>
+
+    <section id="sobremi">
+      <p>
+        Soy una estudiante autodidacta en constante aprendizaje. He adquirido
+        conocimientos en HTML, CSS, JavaScript, C# y POO. Además, he trabajado
+        con frameworks y herramientas como .NET, Bootstrap, ASP, Git, GitHub y
+        SQL Server. Actualmente, profundizando en patrones de diseño e
+        ingresando en el lenguaje Java.
+      </p>
+      <a href="#skills" class="btn">Skills</a>
+    </section>
+
+    <section id="skills">
+      <h1>Skills</h1>
+      <div class="skills">
+        <div class="skill">
+          <h6>HTML</h6>
+        </div>
+        <div class="skill">
+          <h6>CSS</h6>
+        </div>
+        <div class="skill">
+          <h6>Bootstrap</h6>
+        </div>
+        <div class="skill">
+          <h6>C#</h6>
+        </div>
+        <div class="skill">
+          <h6>.Net</h6>
+        </div>
+        <div class="skill">
+          <h6>SQL Server</h6>
+        </div>
+        <div class="skill">
+          <h6>GitHub</h6>
+        </div>
+      </div>
+      <a href="#misproyectos" class="btn">Proyectos</a>
+    </section>
+
+    <section id="misproyectos">
+      <h2>Mis proyectos</h2>
+      <div class="proyectos">
+        <div class="col">
+          <div class="card">
+            <img src="Img/blogweb.png" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Prometeo Blog</h5>
+              <p class="card-text">
+                Aplicación web para crear y editar entradas. Construida con ASP
+                .Net, utilizando C#, Bootstrap y SQL Server.
+              </p>
+              <div class="buttons">
+                <a
+                  href="https://github.com/GiovannaBia/blogpersonal"
+                  class="btn"
+                  >Código</a
+                >
+                <a
+                  href="http://prometeo-blog.somee.com/Default.aspx"
+                  class="btn"
+                  >Ver aplicación</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="Img/gestorweb.png" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Gestor de artículos</h5>
+              <p class="card-text">
+                Aplicación web para gestionar artículos: insertar, modificar,
+                eliminar, ver sus detalles, filtrar búsquedas. Construida con
+                ASP .Net, utilizando C#, Bootstrap y SQL Server.
+              </p>
+              <div class="buttons">
+                <a
+                  href="https://github.com/GiovannaBia/tp-final-nivel3-bianchini-giovanna"
+                  class="btn"
+                  >Código</a
+                >
+                <a href="http://gestordearticulos-web.somee.com/" class="btn"
+                  >Ver aplicación</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="Img/pokeweb.png" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Pokedex Web</h5>
+              <p class="card-text">
+                Aplicación web realizada durante el curso de C# nivel 3 de Maxi
+                Programa. En ella podes insertar, modificar, eliminar, ver
+                detalles y filtrar búsquedas de pokemons. Construida con ASP
+                .Net, utilizando C#, Bootstrap y SQL Server
+              </p>
+              <div class="buttons">
+                <a href="https://github.com/GiovannaBia/pokeweb" class="btn"
+                  >Código</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img
+              src="Img/gestordearticulos.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Gestor de Artículos</h5>
+              <p class="card-text">
+                Aplicación de escritorio para gestionar artículos, construida
+                con WinForms de .Net con C# y SQL Server.
+              </p>
+              <div class="buttons">
+                <a
+                  href="https://github.com/GiovannaBia/TPFinalNivel2_Bianchini"
+                  class="btn"
+                  >Código</a
+                >
+                <a href="gestordearticulos.html" class="btn">Ver más...</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="Img/gestordediscos.png" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Gestor de Discos</h5>
+              <p class="card-text">
+                Aplicación de escritorio para gestionar discos de música
+                utilizando C# .Net y SQL Server
+              </p>
+              <div class="buttons">
+                <a
+                  href="https://github.com/GiovannaBia/practica-discos"
+                  class="btn"
+                  >Código</a
+                >
+                <a href="gestordediscos.html" class="btn">Ver más...</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Contactame</h2>
+      <a
+        href="mailto:giovannabianchini80@gmail.com"
+        target="_blank"
+        class="contacto"
+      >
+        <i class="bi bi-envelope"></i>
+      </a>
+      <a href="https://github.com/GiovannaBia" target="_blank" class="contacto">
+        <i class="bi bi-github"></i>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/giovanna-bianchini-53b985222/"
+        target="_blank"
+        class="contacto"
+      >
+        <i class="bi bi-linkedin"></i>
+      </a>
+    </section>
+  </body>
+</html>
